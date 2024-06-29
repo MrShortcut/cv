@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Test } from '@pages'
-import { useCvContext } from './context'
+import { useCvContext } from '@context'
 
 export default function App () {
   const [ count, setCount ] = useState(0)
@@ -12,6 +12,7 @@ export default function App () {
   return <>
     <Test />
     {cheat}
+
     <div>
       <a href="https://vitejs.dev" target="_blank">
         <img src={viteLogo} className="logo" alt="Vite logo" />
