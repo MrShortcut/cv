@@ -32,10 +32,86 @@
 
   <meta name='development web apps' content='Skills about me, my projects, my crue' />
   <link rel='icon' href='/nm.ico' />
-  </head>
+  <style>
+    body {
+      top: 0;
+      opacity: 0;
+      filter: blur(13px);
+      transition: opacity 2s ease-in-out, filter 1s ease-in-out;
+    }
+
+    body:after {
+      content: '';
+      font-size: .8em;
+      color: rgba(10, 10, 10, .9);
+      position: fixed;
+      width: 100%;
+      bottom: 1em;
+      text-align: center;
+    }
+
+    #cloud {
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      transform: translate(100%, 100%);
+      border-radius: 50%;
+      filter: url(#filter);
+    }
+  </style>
+
+  <script>
+    setTimeout(function() {
+      const main = document.querySelector('body')
+      main.style.opacity = 1
+      main.style.filter = 'blur(0px)'
+    }, 1000)
+  </script>
+</head>
+
 <body>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
+  <!-- ------------------------------------------ -->
+  <!-- ------------- @CLOUDS -------------------- -->
+  <!-- ------------------------------------------ -->
+  <div id="cloud" />
+  <svg width="0">
+    <filter id="filter">
+      <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+      <feDisplacementMap in="SourceGraphic" scale="240" />
+    </filter>
+  </svg>
+
+  <script>
+    function rn (from, to) {
+      return ~~(Math.random() * (to - from + 1)) + from;
+    }
+
+    function rs () {
+      return arguments[ rn(1, arguments.length) - 1 ];
+    }
+
+    function boxShadows (max) {
+      let ret = [];
+      for (let i = 0; i < max; ++i) {
+        ret.push(`
+          ${rn(1, 100)}vw ${rn(1, 100)}vh ${rn(20, 40)}vmin ${rn(1, 20)}vmin
+          ${rs('#f9f9f9', '#a3a7aa', '#eaeaea', '#f5e2c0')}
+        `)
+      }
+      return ret.join(',');
+    }
+
+    const cloud = document.querySelector('#cloud');
+
+    function update () {
+      cloud.style.boxShadow = boxShadows(13);
+    }
+
+    window.addEventListener('load', update);
+    document.addEventListener('click', update);
+  </script>
 </body>
 
 </html>
