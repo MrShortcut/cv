@@ -5,6 +5,7 @@ export const {
   Provider: CvProvider,
   useStore: useCvContext
 } = CreateFastContext({
-  cheat: '@CheatModes'
+  cheat: '@CheatModes',
+  isDarkMode: true,
 })
 
