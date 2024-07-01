@@ -29,6 +29,7 @@
       "@pages": ["pages"],
       "@utilities": ["utilities"],
       "@context": ["context"],
+      "@hooks": ["hooks"],
     }
   },
   "include": ["src"]

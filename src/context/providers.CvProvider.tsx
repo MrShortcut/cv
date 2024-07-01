@@ -9,5 +9,6 @@ export const {
   isDarkMode: false,
   isShowing: false,
   isShowingDoc: false,
+  isShowingClouds: true,
 })
 

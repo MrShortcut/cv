@@ -7,15 +7,16 @@ import { Transition } from '@headlessui/react';
 export function Header () {
   const [ isShowing ] = useCvContext(s => s.isShowing);
   const [ isShowingDoc, set ] = useCvContext(s => s.isShowingDoc);
+  const [ isShowingClouds ] = useCvContext(s => s.isShowingClouds);
 
   return <Transition show={isShowing}>
     <div
       className={cx(
-        'flex min-w-full gap-4',
+        'flex min-w-full gap-0 md:gap-4',
         'size-full rounded-xl transition duration-[800ms]',
         'data-[closed]:-translate-y-11 data-[closed]:opacity-0',
         'data-[leave]:duration-[800ms] data-[leave]:ease-in-out',
-        'data-[leave]:data-[closed]:translate-y-0'
+        'data-[leave]:data-[closed]:translate-y-0',
       )}
     >
       <ThemeToggle />
@@ -37,6 +38,14 @@ export function Header () {
         title='Imprimir'
         onClick={() => set({
           'isShowingDoc': !isShowingDoc
+        })}
+      />
+
+      <DefaultButton
+        text='Nubes'
+        title={isShowingClouds ? 'Ocultar nubes' : 'Mostrar Nubes'}
+        onClick={() => set({
+          'isShowingClouds': !isShowingClouds
         })}
       />
     </div>

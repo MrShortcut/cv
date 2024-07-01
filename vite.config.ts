@@ -14,6 +14,13 @@ export default defineConfig({
       { find: '@pages', replacement: resolve(__dirname, "./src/pages") },
       { find: '@utilities', replacement: resolve(__dirname, "./src/utilities") },
       { find: '@context', replacement: resolve(__dirname, "./src/context") },
+      { find: '@hooks', replacement: resolve(__dirname, "./src/hooks") },
     ]
-  }
+  },
+  server: {
+    port: 5174,
+  },
+  preview: {
+    port: 5174,
+  },
 })

@@ -18,7 +18,17 @@ export default {
       textColor: {
         white: '#e0e0e0',
         black: '#121212',
-      }
+      },
+      fontFamily: {
+        heading: 'Times New Roman',
+      },
+      fontSize: {
+        heading: [
+          '2.5rem', {
+            lineHeight: '1rem ',
+          } 
+        ]
+      },
     },
   },
   plugins: [],

@@ -20,7 +20,7 @@ export const ThemeToggle = () => {
     title={isDarkMode ? 'Cambiar a modo claro' : 'Cambiar a modo oscuro'}
     checked={isDarkMode}
     onChange={toggleTheme}
-    className='group relative flex h-7 w-14 cursor-pointer rounded-full bg-lightWhite dark:bg-ligthDark p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/10'
+    className='scale-[90%] md:scale-100  group relative flex h-7 w-14 md:h-7 md:w-14 cursor-pointer rounded-full bg-lightWhite dark:bg-ligthDark p-1 transition-colors duration-200 ease-in-out focus:outline-none data-[focus]:outline-1 data-[focus]:outline-white data-[checked]:bg-white/10'
   >
     <span
       aria-hidden='true'

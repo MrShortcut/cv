@@ -7,7 +7,6 @@ export const TransitionAnimated = ({ flag, children }: { flag: boolean; children
   return <Transition show={flag}>
     <div
       className={cx(
-        'mt-8',
         'size-full rounded-xl transition duration-[400ms]',
         'data-[closed]:translate-y-10 data-[closed]:opacity-0',
         'data-[leave]:duration-[400ms] data-[leave]:ease-in-out',
