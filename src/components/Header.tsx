@@ -30,7 +30,18 @@ export function Header () {
       <DefaultButton
         text='Imprimir'
         title='Imprimir'
-        onClick={() => window.print()}
+        onClick={async () => new Promise((resolve) => {
+          set({
+            'isShowingClouds': false,
+            'isPrinting': true
+          })
+          resolve(true)
+        })
+          .then(res => res && window.print())
+          .finally(() => set({
+            'isPrinting': false,
+            'isShowingClouds': true
+          }))}
       />
 
       <DefaultButton

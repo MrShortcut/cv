@@ -14,5 +14,6 @@ export const {
   isShowAppi: false,
   isShowDCT: false,
   isShowSmartCity: false,
+  isPrinting: false,
 })
 

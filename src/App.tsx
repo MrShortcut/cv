@@ -9,6 +9,7 @@ import { DocPage, CVpage } from '@pages'
 
 export default function App () {
   const [ , set ] = useCvContext(s => s.isShowing)
+  const [ isPrinting, ] = useCvContext(s => s.isPrinting)
   useHandleClouds()
 
   useEffect(() => {
@@ -16,7 +17,7 @@ export default function App () {
   }, [])
 
   return <div className='bg-charlie-brown rounded-lg'>
-    <Header />
+    {!isPrinting && <Header />}
 
     <br />
 
