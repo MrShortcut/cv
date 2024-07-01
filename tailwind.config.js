@@ -21,6 +21,7 @@ export default {
       },
       fontFamily: {
         heading: 'Times New Roman',
+        arial: 'Arial',
       },
       fontSize: {
         heading: [
