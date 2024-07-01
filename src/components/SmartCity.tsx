@@ -17,6 +17,7 @@ export function SmartCity () {
       )}
     > - SmartCity: </em>
     It is INTEIA's most ambitious project, collects all previous applications already created for smart cities.
+    <small className='ml-1 text-black dark:text-white'>React.ts, Tailwind.</small>
 
     {isShowSmartCity && <AnchorOpenWindow
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'

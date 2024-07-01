@@ -2,37 +2,26 @@ import './App.css'
 import { useCvContext } from '@context'
 import { useEffect } from 'react'
 import {
-  TransitionAnimated,
-  Header,
-  VITE_DOC
+  Header
 } from '@components'
 import { useHandleClouds } from '@hooks'
-import { Cv } from './Cv'
+import { DocPage, CVpage } from '@pages'
 
 export default function App () {
-  const [ isShowing, set ] = useCvContext(s => s.isShowing)
-  const [ isShowingDoc ] = useCvContext(s => s.isShowingDoc);
+  const [ , set ] = useCvContext(s => s.isShowing)
   useHandleClouds()
 
   useEffect(() => {
     setTimeout(() => set({ 'isShowing': true }), 1300)
   }, [])
 
-  return <div className='bg-charlie-brown'>
+  return <div className='bg-charlie-brown rounded-lg'>
     <Header />
+
     <br />
 
-    <TransitionAnimated /* CvContainer */
-      flag={isShowing && !isShowingDoc}
-    >
-      {!isShowingDoc && <Cv />}
-    </TransitionAnimated>
+    <CVpage />
 
-
-    <TransitionAnimated /* doc */
-      flag={isShowingDoc}
-    >
-      {isShowingDoc && <VITE_DOC />}
-    </TransitionAnimated>
+    <DocPage />
   </div>
 }

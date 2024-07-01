@@ -17,6 +17,7 @@ export function Appimotion () {
       )}
     > - Appimotion landing page and dashboard: </em>
     Appimotion is an agile and practical application for you to efficient and monitor mobility in your organization.
+    <small className='ml-1 text-black dark:text-white'>React.js, MaterialUI.</small>
 
     {isShowAppi && <AnchorOpenWindow
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
