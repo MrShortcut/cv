@@ -37,7 +37,7 @@
       top: 0;
       opacity: 0;
       filter: blur(13px);
-      transition: opacity 2s ease-in-out, filter 1s ease-in-out;
+      transition: opacity 400ms ease-in-out, filter 4ms ease-in-out;
     }
 
     body:after {
@@ -57,6 +57,8 @@
       transform: translate(100%, 100%);
       border-radius: 50%;
       filter: url(#filter);
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out, filter 1s ease-in-out;
     }
   </style>
 
@@ -111,6 +113,11 @@
 
     window.addEventListener('load', update);
     document.addEventListener('click', update);
+
+    setTimeout(function() {
+      const main = document.querySelector('#cloud')
+      main.style.opacity = 1
+    }, 2000)
   </script>
 </body>
 

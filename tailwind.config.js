@@ -7,11 +7,14 @@ export default {
   darkMode:'class',
   theme: {
     extend: {
-      colors: {
+      backgroundColor: {
+        lightWhite: '#f7f8fa',
+        lightDark: '#1c1f2f',
       },
+      colors: {},
       textColor: {
         white: '#e0e0e0',
-        black: '#121212'
+        black: '#121212',
       }
     },
   },
