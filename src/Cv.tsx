@@ -118,7 +118,7 @@ export const Cv = () => {
 
       <CoolHr className='mt-6 mb-6' />
 
-      <Heading /** @Side carreer */
+      <Heading /** @SideCarreer */
         text={<>
           SIDE CARRER{!isLargeScreen && <br />}<Space />
           <em className='text-lg -mb-7'>
@@ -134,10 +134,45 @@ export const Cv = () => {
           className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
           title='Linkedin Rodrigo Moreno'
           href='https://linkedin.com/in/rodrigo-moreno-rr'
-          text='Linkedin'
+          text='Linkedin.'
         />
+
+        <br />
+        - Supervisor Assistant{!isLargeScreen && ':'}
+        {!isLargeScreen && <br />}<Space />at
+        <Space />
+        <span className='text-black dark:text-white'> DRUMMOND LTD</span>
+        <Space />
+        <em className='text-lg -mb-7'>
+          <b>03/10/2018 ~ 03/10/2020: </b>
+        </em>
+        Supervision of mining equipment, mining operation, dumps and backfill. Pribbenow Mine, in parallel, risk and hazard measurement was carried out on members of the organization.
+
+        <br />
+        - Resident engineer{!isLargeScreen && ':'}
+        {!isLargeScreen && <br />}<Space />at
+        <Space />
+        <span className='text-black dark:text-white'>INGENIEROS GF S.A.S</span>
+        <Space />
+        <em className='text-lg -mb-7'>
+          <b> 06/03/17 ~ 05/04/18: </b>
+        </em>
+        Resident of road work, supervision of operation, excavation transport and conformation of rocky material.
+
+        <br />
+        - Hardware and software technician{!isLargeScreen && ':'}
+        {!isLargeScreen && <br />}<Space />at
+        <Space />
+        <span className='text-black dark:text-white'> ENLACE </span>
+        <Space />
+        <em className='text-lg -mb-7'>
+          <b>08/2016 ~ 01/2017</b>
+        </em>
+        <Space />
+        Equipment inventory (Hardware) and equipment maintenance (Hardware), cleaning, formatting, installation of software in the field. Remote delivery of reports. Servicios de Tecnologías de Información y comunicaciones -TIC
       </div>
 
+      <CoolHr className='mt-6 mb-6' />
     </div>
   </div>;
 };
