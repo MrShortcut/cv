@@ -8,5 +8,6 @@ export const {
   cheatMode: '@CheatModes4',
   isDarkMode: false,
   isShowing: false,
+  isShowingDoc: false,
 })
 

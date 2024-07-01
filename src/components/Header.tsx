@@ -6,6 +6,8 @@ import { Transition } from '@headlessui/react';
 
 export function Header () {
   const [ isShowing ] = useCvContext(s => s.isShowing);
+  const [ isShowingDoc, set ] = useCvContext(s => s.isShowingDoc);
+
   return <Transition show={isShowing}>
     <div
       className={cx(
@@ -21,12 +23,22 @@ export function Header () {
       <DefaultButton
         text='Descargar CV'
         title='Descargar CV'
-        onClick={undefined} />
+        onClick={undefined}
+      />
 
       <DefaultButton
         text='Imprimir'
         title='Imprimir'
-        onClick={() => window.print()} />
+        onClick={() => window.print()}
+      />
+
+      <DefaultButton
+        text='Doc'
+        title='Imprimir'
+        onClick={() => set({
+          'isShowingDoc': !isShowingDoc
+        })}
+      />
     </div>
   </Transition>;
 }
