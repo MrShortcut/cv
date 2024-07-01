@@ -13,5 +13,6 @@ export const {
   isShowD33p: false,
   isShowAppi: false,
   isShowDCT: false,
+  isShowSmartCity: false,
 })
 
