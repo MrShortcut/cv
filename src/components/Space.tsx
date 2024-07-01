@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export const Space = () => ' ';
 
 export const CoolHr = (
@@ -11,7 +13,7 @@ export const CoolHr = (
   `} />
 
 export const Heading = (
-  { text }: { text: string }
+  { text }: { text: string | ReactNode }
 ) => <h2 className='mb-2'>
     <strong className=' md:text-2xl'>
       {text}

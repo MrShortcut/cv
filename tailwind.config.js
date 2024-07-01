@@ -14,7 +14,9 @@ export default {
         lightWhite: '#f7f8fa',
         lightDark: '#1c1f2f',
       },
-      colors: {},
+      colors: {
+        salmon: '#e56952'
+      },
       textColor: {
         white: '#e0e0e0',
         black: '#121212',

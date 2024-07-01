@@ -10,5 +10,8 @@ export const {
   isShowing: false,
   isShowingDoc: false,
   isShowingClouds: true,
+  isShowD33p: false,
+  isShowAppi: false,
+  isShowDCT: false,
 })
 
