@@ -7,6 +7,7 @@ import {
   SmartCity,
   Appimotion,
   D33p,
+  Skills,
 } from '@components';
 import { useMediaQuery } from '@hooks';
 
@@ -45,23 +46,7 @@ export const Cv = () => {
 
       <CoolHr className='mt-6 mb-6' />
 
-      <Heading text='SKILLS' />
-
-      <div className='text-black dark:text-white/70'>
-        <p className='tracking-wide font-bold font-arial text-sm [word-spacing:13px]'>
-          Front-end Javascript, ES6+, React.js.ts, HTML5, CSS3+, SCSS, Tailwind, AgGridReact,
-          ChakraUI, Next, Webpack<br />
-          Back-end Node.js.ts, Nest.ts, Python <br />
-          Others Powershell, Tradingview PineScript V5, Azure, Git, React Native, Lua, Neovim, Github pages
-        </p>
-        <p className='my-2 text-black dark:text-white'>
-          # Active current learning Typescript | PineScriptV5 | Powershell
-        </p>
-
-        <p>
-          Solid front-end knowledge of React, ES6+, Javascript, Typescript, understanding of design principles, UI/UX, advanced CSS (CSS Modules, Scss, Tailwind, Chakra-UI, Styled-components), and responsive design. Positive attitude, strong work ethic, a drive for results while focusing on high code quality and performance.
-        </p>
-      </div>
+      <Skills />
 
       <CoolHr className='mt-6 mb-6' />
 
@@ -106,10 +91,53 @@ export const Cv = () => {
       />
 
       <div className='text-black dark:text-white/70'>
-        I have worked on my own projects to strengthen my knowledge of development, frontend and backend, in my portfolio and others. With the aim of having projects to show in job interviews to be able to get my first job as developer, i've applied my design and automation knowledge, all my learning notes are in my GithHub profile.
+        I have worked on my own projects to strengthen my knowledge of development, frontend and backend, in my portfolio and others. With the aim of having projects to show in job interviews to be able to get my first job as developer, i've applied my design and automation knowledge, all my learning notes are in my
+        <AnchorOpenWindow
+          className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
+          title='Click para ir a perfil de github'
+          href='https://github.com/rroderickk'
+          text=' GithHub profile student.'
+        />
       </div>
 
       <CoolHr className='mt-6 mb-6' />
+
+      <Heading /** @Education */
+        text={<>
+          EDUCATION{!isLargeScreen && <br />}<Space />
+          <em className='text-lg -mb-7'>
+            <b>28/09/2021 ~ today</b>
+          </em>
+          <br />
+        </>}
+      />
+
+      <div className='text-black dark:text-white/70'>
+        At the moment Self-taught with 13+ certificates of completion, Platzi & Others platforms | React.js | Node.js | Python | Typescript | Typescript Advanced | Closures and scope Javascript | CSS3 | SCSS | Javascript | ES6+ | OOP | Node | Nest | Next | Webpack | SPa | Effective time management | Responsive design: mobile first | SOFTWARE ENGINEERING FUNDAMENTALS.
+      </div>
+
+      <CoolHr className='mt-6 mb-6' />
+
+      <Heading /** @Side carreer */
+        text={<>
+          SIDE CARRER{!isLargeScreen && <br />}<Space />
+          <em className='text-lg -mb-7'>
+            <b>06/2009 ~ 10/2016</b>
+          </em>
+          <br />
+        </>}
+      />
+
+      <div className='text-black dark:text-white/70'>
+        Mining engineer specializing in road geotechnics. View more in <Space/>
+        <AnchorOpenWindow
+          className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
+          title='Linkedin Rodrigo Moreno'
+          href='https://linkedin.com/in/rodrigo-moreno-rr'
+          text='Linkedin'
+        />
+      </div>
+
     </div>
   </div>;
 };

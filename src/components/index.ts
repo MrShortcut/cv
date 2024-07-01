@@ -4,6 +4,7 @@ export * from './D33p';
 export * from './DCT';
 export * from './DefaultButton';
 export * from './Header';
+export * from './SkillsBody';
 export * from './SmartCity';
 export * from './Space';
 export * from './ThemeToggle';
