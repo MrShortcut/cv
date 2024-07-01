@@ -14,7 +14,7 @@ export const VITE_DOC = () => {
       title='Click para ir a x.com/@CheatModes4'
       href='https://twitter.com/cheatmodes4'
       text={MadeByME}
-      className='text-dark dark:text-white/60 mb-4 hover:text-purple-400 dark:hover:text-purple-500'
+      className='text-dark dark:text-white/60 mb-4 hover:text-purple-800 dark:hover:text-purple-500'
     />
 
     <div className='flex items-center justify-center relative z-10'>
