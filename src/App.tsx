@@ -1,48 +1,25 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import { Test } from '@pages'
 import { useCvContext } from '@context'
-import { DefaultButton, ThemeToggle } from '@components'
-import { cx } from './utilities'
+import { cx } from '@utilities'
 import { Transition } from '@headlessui/react'
 import { useEffect } from 'react'
+import { Header } from '@components'
 
 export default function App () {
   const [ cheatMode ] = useCvContext(s => s.cheatMode)
   const [ isShowing, set ] = useCvContext(s => s.isShowing)
 
   useEffect(() => {
-    setTimeout(() => {
-      set({ 'isShowing': true })
-    }, 1300)
+    setTimeout(() => set({ 'isShowing': true }), 1300)
   }, [])
 
-  return <>
-    <Transition show={isShowing}>
-      <div
-        className={cx(
-          'flex min-w-full gap-4',
-          'size-full rounded-xl transition duration-[800ms]',
-          'data-[closed]:-translate-y-11 data-[closed]:opacity-0',
-          'data-[leave]:duration-[800ms] data-[leave]:ease-in-out',
-          'data-[leave]:data-[closed]:translate-y-0'
-        )}
-      >
-        <ThemeToggle />
+  return <div className='bg-charlie-brown'>
+    <Header />
 
-        <DefaultButton
-          text='Descargar CV'
-          onClick={undefined}
-        />
 
-        <DefaultButton
-          text='Imprimir'
-          onClick={undefined}
-        />
-      </div>
-    </Transition>
-
+    {/* Cv */}
     <Transition show={isShowing}>
       <div
         className={cx(
@@ -54,7 +31,6 @@ export default function App () {
         )}
       >
         <div className='text-black dark:text-white'>{cheatMode}</div>
-        <Test />
 
         <div className='flex items-center justify-center relative z-10'>
           <a href='https://vitejs.dev' target='_blank'>
@@ -75,6 +51,5 @@ export default function App () {
         </p>
       </div>
     </Transition>
-  </>
+  </div>
 }
-
