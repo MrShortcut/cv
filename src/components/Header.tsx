@@ -15,7 +15,10 @@ export function Header () {
   const [ isDownloading ] = useCvContext(s => s.isDownloading);
 
   useEffect(() => {
-    setTimeout(() => set({ 'isDownloading': false }), 4000)
+    if (isDownloading) {
+      const timer = setTimeout(() => set({ 'isDownloading': false }), 10000);
+      return () => clearTimeout(timer);
+    }
   }, [ isDownloading ])
 
   return <Transition show={isShowing}>
@@ -69,7 +72,7 @@ export function Header () {
       />
 
       <DefaultButton
-        text='Nubes'
+        text={isShowingClouds ? 'Nubes' : 'Nubes off'}
         title={isShowingClouds ? 'Ocultar nubes' : 'Mostrar Nubes'}
         onClick={() => set({ 'isShowingClouds': !isShowingClouds })}
         className={cx(
