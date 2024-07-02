@@ -1,6 +1,7 @@
 import { useCvContext } from '@context';
 import { AnchorOpenWindow } from '@components';
 import { cx } from '@utilities';
+import appi from '@assets/appimotion.png'
 
 
 export function Appimotion () {
@@ -23,6 +24,6 @@ export function Appimotion () {
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
       title='Click para ir a Appimotion.com'
       href='https://www.appimotion.com'
-      text={<img src='/src/assets/appimotion.png' alt='d33p landing page' />} />}
+      text={<img src={appi} alt='d33p landing page' />} />}
   </>;
 }

@@ -1,6 +1,7 @@
 import { useCvContext } from '@context';
 import { AnchorOpenWindow } from '@components';
 import { cx } from '@utilities';
+import sm from '@assets/sm.png'
 
 
 export function SmartCity () {
@@ -23,6 +24,6 @@ export function SmartCity () {
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
       title='Click para ir a SmartCity'
       href='https://smartcity.z20.web.core.windows.net'
-      text={<img src='/src/assets/sm.png' alt='Smartcity' />} />}
+      text={<img src={sm} alt='Smartcity' />} />}
   </>;
 }
