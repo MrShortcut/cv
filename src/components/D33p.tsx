@@ -18,7 +18,9 @@ export function D33p () {
       )}
     > - D33P landing page and dashboard: </em>
     D33P automates capacity processes, detection, classification, and monitoring of road actors, by means (Deep Learning and Artificial Intelligence) and computer vision (image analytics).
-    <small className='ml-1 text-black dark:text-white'>React.js 2019, MaterialUI.</small>
+    <small className='ml-1 text-black dark:text-white'>
+      React.js 2019, MaterialUI, Redux, Redux-Saga.
+    </small>
 
     {isShowD33p && <AnchorOpenWindow
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'

@@ -1,6 +1,6 @@
 import { useCvContext } from '@context';
 import { TransitionAnimated } from '@components';
-import { Cv } from '../Cv';
+import { Cv } from '@components';
 
 
 export function CVpage () {

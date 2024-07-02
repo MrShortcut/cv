@@ -1,5 +1,6 @@
 export * from './AnchorOpenWindow';
 export * from './Appimotion';
+export * from './Cv';
 export * from './D33p';
 export * from './DCT';
 export * from './DefaultButton';
