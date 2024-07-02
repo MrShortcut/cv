@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8' />
+  <!-- <link rel='icon' type='image/svg+xml' href='/vite.svg' /> -->
+	<link rel='icon' type='image/png' href='/cv/assets/favicon-B2dXmdx-.png'>
+
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>Rodrigo Moreno | Frontend Developer | Software developer</title>
+
+  <link rel='preconnect' href='https://fonts.googleapis.com' />
+  <link rel='preconnect' href='https://fonts.gstatic.com' />
+  <link href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;800&display=swap' rel='stylesheet' />
+
+  <meta name='robots' content='follow, index' />
+  <meta name='description'
+    content='Learning Engineer at @platzi - Frontend Developer - #JavaScript #TypeScript #Html5 #Css3 #React #Next #Nvim #Web3 #BTC #ETH ' />
+  <meta property='og:url' content='https://keepsimpleweb.github.io' />
+  <meta property='og:type' content='website' />
+  <meta property='og:site_name' content='Rodrigo Moreno aka CheatModes4' />
+  <meta property='og:description'
+    content='Learning Engineer at @platzi - Frontend Developer - #JavaScript #TypeScript #Html5 #Css3 #React #Next #Nvim #Web3 #BTC #ETH ' />
+  <meta property='og:title' content='Rodrigo Moreno' />
+  <meta property='og:image' content='https://pbs.twimg.com/profile_images/1490328824411787264/aZ4btbsP_400x400.jpg' />
+  <meta property='og:locale' content='es_ES' />
+  <meta name='twitter:card' content='summary_large_image' />
+  <meta name='twitter:title' content='Rodrigo Moreno aka CheatModes4' />
+  <meta name='twitter:description'
+    content='Learning Engineer at @platzi - Frontend Developer - #JavaScript #TypeScript #Html5 #Css3 #React #Next #Nvim #Web3 #BTC #ETH' />
+  <meta name='twitter:image' content='https://pbs.twimg.com/profile_images/1490328824411787264/aZ4btbsP_400x400.jpg' />
+  <meta name='twitter:site' content='@CheatModes4' />
+  <meta name='twitter:creator' content='@CheatModes4' />
+
+  <meta name='development web apps' content='Skills about me, my projects, my crue' />
+  <style>
+    body {
+      top: 0;
+      opacity: 0;
+      filter: blur(13px);
+      transition: opacity 400ms ease-in-out, filter 4ms ease-in-out;
+    }
+
+    body:after {
+      content: '';
+      font-size: .8em;
+      color: rgba(10, 10, 10, .9);
+      position: fixed;
+      width: 100%;
+      bottom: 1em;
+      text-align: center;
+    }
+
+    #cloud {
+      overflow: hidden;
+      width: 1px;
+      height: 1px;
+      margin-top: 30vh;
+      position: absolute;
+      z-index: 50;
+      transform: translate(100%, 100%);
+      border-radius: 50%;
+      filter: url(#filter);
+      opacity: 0;
+      transition: opacity 1000ms ease-in-out, filter 1s ease-in-out;
+    }
+  </style>
+
+  <script>
+    setTimeout(function() {
+      const main = document.querySelector('body')
+      main.style.opacity = 1
+      main.style.filter = 'blur(0px)'
+    }, 1000)
+  </script>
+  <script type="module" crossorigin src="/cv/assets/index-BKff4WTm.js"></script>
+  <link rel="stylesheet" crossorigin href="/cv/assets/index-ds7rriXv.css">
+</head>
+
+<body class='antialiased text-black bg-white dark:bg-slate-950 dark:text-white'>
+  <div id='root'></div>
+  <!-- ------------------------------------------ -->
+  <!-- ------------- @CLOUDS -------------------- -->
+  <!-- ------------------------------------------ -->
+  <div id='cloud' />
+  <svg width='0'>
+    <filter id='filter'>
+      <feTurbulence type='fractalNoise' baseFrequency='.01' numOctaves='10' />
+      <feDisplacementMap in='SourceGraphic' scale='240' />
+    </filter>
+  </svg>
+
+  <script>
+    function rn (from, to) {
+      return ~~(Math.random() * (to - from + 1)) + from;
+    }
+
+    function rs () {
+      return arguments[ rn(1, arguments.length) - 1 ];
+    }
+
+    function boxShadows (max) {
+      let ret = [];
+      for (let i = 0; i < max; ++i) {
+        ret.push(`
+          ${rn(1, 100)}vw ${rn(1, 100)}vh ${rn(20, 40)}vmin ${rn(1, 20)}vmin
+          ${rs('#f9f9f9', '#a7a7aa', '#eaeaea', '#f5e2c0')}
+        `)
+      }
+      return ret.join(',');
+    }
+
+    const cloud = document.querySelector('#cloud');
+
+    function update () {
+      cloud.style.boxShadow = boxShadows(13);
+    }
+
+    window.addEventListener('load', update);
+    document.addEventListener('click', update);
+
+    setTimeout(function() {
+      const main = document.querySelector('#cloud')
+      main.style.opacity = 1
+    }, 2000)
+  </script>
+</body>
+
+</html>
