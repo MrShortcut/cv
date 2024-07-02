@@ -15,5 +15,6 @@ export const {
   isShowDCT: false,
   isShowSmartCity: false,
   isPrinting: false,
+  isDownloading: false,
 })
 
