@@ -16,6 +16,7 @@ export default defineConfig({
       { find: '@utilities', replacement: resolve(__dirname, "./src/utilities") },
       { find: '@context', replacement: resolve(__dirname, "./src/context") },
       { find: '@hooks', replacement: resolve(__dirname, "./src/hooks") },
+      { find: '@assets', replacement: resolve(__dirname, "./src/assets") },
     ]
   },
   server: {

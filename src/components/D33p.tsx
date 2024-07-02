@@ -1,6 +1,7 @@
 import { useCvContext } from '@context';
 import { AnchorOpenWindow } from '@components';
 import { cx } from '@utilities';
+import deep from '@assets/d33p.png'
 
 
 export function D33p () {
@@ -23,6 +24,6 @@ export function D33p () {
       className='text-[#000] font-black dark:text-[#fff] mb-4 hover:text-purple-800 dark:hover:text-purple-500'
       title='Click para ir al D33p landing'
       href='https://deeplandingpagestaeus2sa.z20.web.core.windows.net'
-      text={<img src='public/d33p.png' alt='d33p landing page' />} />}
+      text={<img src={deep} alt='d33p landing page' />} />}
   </>;
 }
