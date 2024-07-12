@@ -15,7 +15,7 @@ export default function App () {
       const timer = setTimeout(() => set({ 'isShowing': true }), 1300)
       return () => clearTimeout(timer);
     }
-  }, [ isShowing ])
+  }, [ isShowing, set ])
 
   return <div className='bg-charlie-brown rounded-lg'>
     {!isPrinting && <Header />}
